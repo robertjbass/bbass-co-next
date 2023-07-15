@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
+import Image from "next/image";
 
 export default function Home() {
   const [animationStage, setAnimationStage] = useState(0);
@@ -58,7 +59,13 @@ export default function Home() {
         </div>
       </div>
       <div className="ml-0 md:ml-8 mt-8 md:mt-0 z-50 transition-all flex">
-        <img src="headshot.jpg" className="h-36 w-36 rounded-full m-auto" />
+        <Image
+          src="/headshot.jpg"
+          width={150}
+          height={150}
+          className="rounded-full m-auto"
+          alt="Bob Bass"
+        />
       </div>
     </Layout>
   );
