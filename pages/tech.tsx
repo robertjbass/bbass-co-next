@@ -1,6 +1,5 @@
 import { useState } from "react";
 import Layout from "@/components/Layout";
-// import TechItem from "@/components/TechItem";
 
 const allTechnologies = [
   {
@@ -173,7 +172,7 @@ const tags = [
 ];
 
 export default function Tech() {
-  const [filter, setFilter] = useState(null);
+  const [filter, setFilter] = useState<null | string>(null);
   const technologies = allTechnologies.filter((item) => {
     if (filter === null || filter === "all") {
       return true;
