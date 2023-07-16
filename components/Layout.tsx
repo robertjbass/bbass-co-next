@@ -15,7 +15,7 @@ const navItems = [
     to: "/",
   },
   {
-    name: "techologies",
+    name: "tech",
     to: "/tech",
   },
   {
@@ -44,9 +44,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         className="w-full flex h-24 absolute top-0 left-0 p-8 transition-all z-30 shadow-2xl"
       >
         <div className="flex flex-grow flex-row justify-between mx-auto m-auto">
-          <Link id="logo" href="/" className="m-auto text-pink-500">
-            Bob Bass
-          </Link>
           {navItems.map((item) => (
             <Link
               href={item.to !== pathname ? item.to : ""}
@@ -64,7 +61,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
       <div className="transition-all h-screen">
         <main className="w-full h-full flex flex-col p-8 z-20">
-          <div className="text-white my-auto mx-auto flex flex-col md:flex-row">
+          <div className="text-white m-auto flex flex-col md:flex-row">
             {children}
           </div>
         </main>
